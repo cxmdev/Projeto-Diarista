@@ -1,0 +1,54 @@
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = ['venv']
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+include = '.pyi?$'
+exclude = '''
+/(
+    .eggs
+    | .git
+    | .hg
+    | .mypy_cache
+    | .nox
+    | .tox
+    | .venv
+    | .direnv
+    | .svn
+    | _build
+    | buck-out
+    | build
+    | dist
+    | migrations
+    | manage.py
+    | snapshots
+)/
+'''
+[tool.flake8]
+max-line-length = 120
+max-complexity = 10
+exclude = '''
+/(
+    .eggs
+    | .git
+    | .hg
+    | .mypy_cache
+    | .nox
+    | .tox
+    | .venv
+    | .direnv
+    | .svn
+    | _build
+    | buck-out
+    | build
+    | dist
+    | venv
+    | migrations
+    | manage.py
+    | settings.py
+    | snapshots
+)/
+'''
